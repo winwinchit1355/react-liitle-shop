@@ -1,14 +1,11 @@
 import Layout from '../components/layouts'
-import BannerImage from '../assets/banners/banner.avif'
+import Banner from '../components/banner/Banner'
 
 const Home = () => {
 
     return (
         <Layout>
-            <section className="h-[500px] bg-[#d8e3ff] flex items-center justify-center">
-                
-            </section>
-            <div style={{height:"100vh"}}></div>
+            <Banner />
         </Layout>
     )
 }
