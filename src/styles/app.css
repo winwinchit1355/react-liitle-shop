@@ -6,3 +6,6 @@
     --default-color: #f9fafb;    
   }
 
+body {
+    background-color: var(--default-color);
+}
