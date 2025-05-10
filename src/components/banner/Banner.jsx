@@ -4,7 +4,7 @@ import { FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa"
 
 const Banner = () => {
     return (
-        <div className="flex flex-col md:flex-row px-8 md:px-18 py-12 justify-between bg-[#d8e3ff]">
+        <div className="flex flex-col md:flex-row px-8 md:px-18 pt-12 justify-between bg-[#d8e3ff]">
             <div className="w-full md:w-1/3 items-center justify-center mt-auto mb-auto">
                 <h1 className="text-5xl font-bold mb-6">Transform your Skin, Embrace Your Glow</h1>
                 <p className="mb-6">Discover radiant, healthy skin with our expert care and premium solutions designed just for you</p>
