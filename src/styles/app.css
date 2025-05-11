@@ -9,3 +9,9 @@
 body {
     background-color: var(--default-color);
 }
+
+.container {
+    margin: 0 auto;
+    width: 1240px;
+    max-width: 100%;
+}

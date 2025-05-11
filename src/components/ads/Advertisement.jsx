@@ -1,16 +1,17 @@
 import AdsImage from "../../assets/ads/ads.webp"
 import { IoIosBrush } from "react-icons/io"
+import AdItem from "../container/AdItem";
 
 const leftData = [
-  { id: 1, title: "Nail Elegance", desc: "Lorem ipsum dolor sit amet.",img:'' },
-  { id: 2, title: "Nail Design", desc: "Adipisicing elit sed do.",img:'' },
-  { id: 3, title: "Luxury Nails", desc: "Consectetur elit amet.",img:''}
+  { id: 1, title: "Nail Elegance", desc: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.Lorem ipsum dolor sit amet.", img: ''},
+  { id: 2, title: "Nail Design", desc: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.", img:'' },
+  { id: 3, title: "Luxury Nails", desc: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.", img:''}
 ];
 
 const rightData = [
-  { id: 1, title: "Nail Elegance", desc: "Lorem ipsum dolor sit amet.",img:'' },
-  { id: 2, title: "Nail Design", desc: "Adipisicing elit sed do.",img:'' },
-  { id: 3, title: "Luxury Nails", desc: "Consectetur elit amet.",img:''}
+  { id: 1, title: "Nail Elegance", desc: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.", img:'' },
+  { id: 2, title: "Nail Design", desc: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.", img:'' },
+  { id: 3, title: "Luxury Nails", desc: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.", img:''}
 ];
 
 const Advertisement = () => {
@@ -21,61 +22,36 @@ const Advertisement = () => {
                     Transform with <br></br>Our Glowing Services
                 </h1>
             </div>
-            <div className="flex justify-center items-center">
+            <div className="flex flex-col space-y-5 lg:space-y-0 lg:flex-row lg:justify-center lg:items-center">
                 <div className="left flex flex-wrap gap-8 justify-end">
-                    <div className="flex items-center justify-center gap-4 w-full">
-                        <div className="w-1/2">
-                            <h4 className="text-xl font-bold">Nail Elegance</h4>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. </p>
-                        </div>
-                        <IoIosBrush className="h-8 w-8 mt-4" />
-                    </div>
-                    <div className="flex items-center justify-center gap-4 w-full">
-                        <div className="w-1/2">
-                            <h4 className="text-xl font-bold">Nail Elegance</h4>
-                            <p>Lorem, ipsum dolor sit amet conseclit. </p>
-                        </div>
-                        <IoIosBrush className="h-8 w-8 mt-4" />
-                    </div>
-                    <div className="flex items-center justify-center gap-4 w-full">
-                        <div className="w-1/2">
-                            <h4 className="text-xl font-bold">Nail Elegance</h4>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. </p>
-                        </div>
-                        <IoIosBrush className="h-8 w-8 mt-4" />
-                    </div>
+                    {leftData.map((item) => (
+                        <AdItem
+                            key={item.id}
+                            title={item.title}
+                            info={item.desc}
+                            icon={<IoIosBrush className="h-8 w-8 mt-4" />}
+                        />
+                    ))}
                 </div>
 
-                <div className="middle">
+                <div className="middle hidden lg:flex">
                     <img
-                        className="rounded-t-[40%] rounded-b-[40%] border-0 border-gray-800"
+                        className="min-w-80 w-80 max-w-full rounded-t-[40%] rounded-b-[40%] border-0 border-gray-800"
                         src={AdsImage}
                         alt=""
                     />
                 </div>
 
                 <div className="right flex flex-wrap gap-8 justify-start">
-                    <div className="flex items-center justify-center gap-4 w-full">
-                        <IoIosBrush className="h-8 w-8 mt-4" />
-                        <div className="w-1/2">
-                            <h4 className="text-xl font-bold">Nail Elegance</h4>
-                            <p>Lorem, ipsum dolor sit amet consipisicing elit. </p>
-                        </div>
-                    </div>
-                    <div className="flex items-center justify-center gap-4 w-full">
-                        <IoIosBrush className="h-8 w-8 mt-4" />
-                        <div className="w-1/2">
-                            <h4 className="text-xl font-bold">Nail Elegance</h4>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. </p>
-                        </div>
-                    </div>
-                    <div className="flex items-center justify-center gap-4 w-full">
-                        <IoIosBrush className="h-8 w-8 mt-4" />
-                        <div className="w-1/2">
-                            <h4 className="text-xl font-bold">Nail Elegance</h4>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. </p>
-                        </div>
-                    </div>
+                    {rightData.map((item) => (
+                        <AdItem
+                            key={item.id}
+                            side="right"
+                            title={item.title}
+                            info={item.desc}
+                            icon={<IoIosBrush className="h-8 w-8 mt-4" />}
+                        />
+                    ))}
                 </div>
             </div>
         </div>
