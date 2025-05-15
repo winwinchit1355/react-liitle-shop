@@ -1,8 +1,9 @@
 import { Link } from "react-router"
 import { MagnifyingGlassIcon, ShoppingCartIcon } from "@heroicons/react/24/solid"
-import { GlobeAsiaAustraliaIcon } from "@heroicons/react/24/outline"
+import { ShoppingBagIcon, UserIcon } from "@heroicons/react/24/outline"
 import { IoMdGlobe } from "react-icons/io"
-import { FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa"
+import { IoBookOutline } from "react-icons/io5";
+import { FaFacebook, FaTwitter, FaInstagram, FaBookOpen } from "react-icons/fa"
 import SITELOGO from "../../assets/react.svg"
 const Footer = () => {
     return (
@@ -16,19 +17,20 @@ const Footer = () => {
                                     className="flex items-center justify-center text-center h-full border-r-1 border-gray-200 text-sm"
                                     to="/shop"
                                 >
-                                    Shop
+                                    <ShoppingBagIcon className="w-5 h-5" />
                                 </Link>
                                 <Link
                                     className="flex items-center justify-center text-center h-full border-r-1 border-gray-200 text-sm"
                                     to="/about"
                                 >
-                                    About
+                                    <UserIcon className="w-5 h-5" />
                                 </Link>
                                 <Link
                                     className="flex items-center justify-center text-center h-full border-r-1 border-gray-200 text-sm"
                                     to="/blog"
+                                    title="About"
                                 >
-                                    Blog
+                                    <IoBookOutline className="w-5 h-5" />
                                 </Link>
                             </div>
                         </div>
